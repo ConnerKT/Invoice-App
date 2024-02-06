@@ -10,6 +10,7 @@ import Settings from "./Settings.js";
 function App() {
   return (
     <>
+    
       <BrowserRouter>
         <Routes>
           <Route

@@ -2,9 +2,17 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from 'react'
 import { themeChange } from 'theme-change'
+import { useState } from "react";
 
 
 function Settings() {
+
+  useEffect(() => {
+    themeChange(false)
+    // 👆 false parameter is required for react project
+  }, [])
+
+  const [state, setState] = useState('')
   const navigate = useNavigate();
 
   const handleButtonClick = () => {
@@ -44,7 +52,7 @@ function Settings() {
                 </button>
                 <dialog id="my_modal_2" className="modal">
                   <div className="modal-box">
-                    <h3 className="font-bold text-lg">Hello!</h3>
+                    <h3 className="font-bold text-lg">Select a theme!</h3>
                     <p className="py-4">
                       <div className="form-control">
                         <label className="label cursor-pointer gap-4">
@@ -54,6 +62,7 @@ function Settings() {
                             name="theme-radios"
                             className="radio theme-controller"
                             value="default"
+                            data-set-theme="default"
                           />
                         </label>
                       </div>
@@ -65,6 +74,7 @@ function Settings() {
                             name="theme-radios"
                             className="radio theme-controller"
                             value="retro"
+                            data-set-theme="retro"
                           />
                         </label>
                       </div>
@@ -76,6 +86,7 @@ function Settings() {
                             name="theme-radios"
                             className="radio theme-controller"
                             value="cyberpunk"
+                            data-set-theme="cyberpunk"
                           />
                         </label>
                       </div>
@@ -87,6 +98,7 @@ function Settings() {
                             name="theme-radios"
                             className="radio theme-controller"
                             value="valentine"
+                            data-set-theme="valentine"
                           />
                         </label>
                       </div>
@@ -98,6 +110,7 @@ function Settings() {
                             name="theme-radios"
                             className="radio theme-controller"
                             value="aqua"
+                            data-set-theme="aqua"
                           />
                         </label>
                       </div>
