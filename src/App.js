@@ -6,6 +6,7 @@ import InvoicePage from "./InvoicePage.js";
 import LandingPage from "./LandingPage.js";
 import NotFound from "./NotFound.js";
 import Settings from "./Settings.js";
+import AdditionalHeader from "./AdditionalHeader.js";
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
             path="/"
             element={
               <>
-                <Header />
+                <AdditionalHeader />
                 <LandingPage />
               </>
             }
