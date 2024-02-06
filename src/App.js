@@ -5,20 +5,35 @@ import Invoices from './Invoices.js';
 import InvoicePage from "./InvoicePage.js";
 import LandingPage from "./LandingPage.js";
 import NotFound from "./NotFound.js";
+import Settings from "./Settings.js";
 
 function App() {
   return (
     <>
-    <div>
-    <Header/>
-     <BrowserRouter>
+      <BrowserRouter>
         <Routes>
-          <Route index element={<LandingPage/>}></Route>
-          <Route path='/panel' element={<InvoicePage/>}></Route>
-          <Route path="*" element={<NotFound/>}></Route>
+          <Route
+            path="/"
+            element={
+              <>
+                <Header />
+                <LandingPage />
+              </>
+            }
+          />
+          <Route
+            path='/panel'
+            element={
+              <>
+                <Header />
+                <InvoicePage />
+              </>
+            }
+          />
+          <Route path="*" element={<NotFound />} />
+          <Route path="/settings" element={<Settings />} />
         </Routes>
-     </BrowserRouter>
-    </div>
+      </BrowserRouter>
     </>
   );
 }
