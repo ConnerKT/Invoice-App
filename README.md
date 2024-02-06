@@ -48,3 +48,10 @@ This project is licensed under the MIT License - see the LICENSE.md file for det
 Acknowledgments
 
 Feel free to use, modify, and contribute to this Invoice App! If you encounter any issues or have suggestions, please open an issue or submit a pull request.
+
+## Features to Add
+
+- When selecting a theme, a alert will be shown letting the user know that the theme was selected
+[Component](https://daisyui.com/components/alert/)
+
+- 
