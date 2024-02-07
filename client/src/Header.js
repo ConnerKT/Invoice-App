@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import tonrightImage from "./assets/tonright.png"
 
 function Header() {
   const navigate = useNavigate();
@@ -10,7 +11,6 @@ function Header() {
   const handleSettingsButtonClick = () => {
     navigate("/settings");
   };
-
 
   return (
     <div className="navbar bg-base-100 shadow-md">
@@ -55,7 +55,9 @@ function Header() {
             </li>
           </ul>
         </div>
-        <a onClick={handleHomeButtonClick} className="btn btn-ghost text-xl">Invoicer</a>
+        <a onClick={handleHomeButtonClick} className="btn btn-ghost text-xl">
+          Invoicer
+        </a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
@@ -81,23 +83,37 @@ function Header() {
         </ul>
       </div>
       <div className="navbar-end">
-      <div className="dropdown dropdown-end">
-      <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-        <div className="shadow-xl	drop-shadow-md w-10 rounded-full">
-          <img alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+        <div className="dropdown dropdown-end">
+          <div
+            tabIndex={0}
+            role="button"
+            className="btn btn-ghost btn-circle avatar"
+          >
+            <div className="shadow-xl	drop-shadow-md w-10 rounded-full">
+              <img
+                alt="Tailwind CSS Navbar component"
+                src={tonrightImage}
+              />
+            </div>
+          </div>
+          <ul
+            tabIndex={0}
+            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 z-40"
+          >
+            <li>
+              <a className="justify-between">
+                Profile
+                <span className="badge">New</span>
+              </a>
+            </li>
+            <li>
+            <a onClick={handleSettingsButtonClick}>Settings</a>
+            </li>
+            <li>
+              <a>Logout</a>
+            </li>
+          </ul>
         </div>
-      </div>
-      <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-        <li>
-          <a className="justify-between">
-            Profile
-            <span className="badge">New</span>
-          </a>
-        </li>
-        <li><a onClick={handleSettingsButtonClick}>Settings</a></li>
-        <li><a>Logout</a></li>
-      </ul>
-    </div>
       </div>
     </div>
   );

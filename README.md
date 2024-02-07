@@ -54,4 +54,10 @@ Feel free to use, modify, and contribute to this Invoice App! If you encounter a
 - When selecting a theme, a alert will be shown letting the user know that the theme was selected
 [Component](https://daisyui.com/components/alert/)
 
-- 
+- Add Authentication
+    - Clerk? Auth0?
+
+- Make it so when I click print on a customers history, it produces a pdf example for admin.
+
+- Organize files, component folder, page folder, route folder, and more
+
